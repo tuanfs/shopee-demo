@@ -1,0 +1,113 @@
+@import "commons/variables.scss";
+.flashSale {
+    background-color: $secondary-color;
+    position: relative;
+    margin-top: 20px;
+    .heading {
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(218, 215, 215);
+        .title {
+            margin-bottom: 0;
+            color: $primary-color;
+            font-size: 2rem;
+        }
+        .link {
+            color: $primary-color;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .body {
+        text-align: center;
+        .item {
+            position: relative;
+            height: 240px;
+            .top {
+                width: 100%;
+                height: 100%;
+                display: inline-flex;
+                justify-content: center;
+                .bgr,
+                .img {
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            .bottom {
+                position: absolute;
+                width: 100%;
+                bottom: 12px;
+                text-align: center;
+                .price {
+                    color: $primary-color;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    .lable {
+                        font-size: 1.2rem;
+                    }
+                }
+                .sold {
+                    background-color: $primary-color;
+                    height: 16px;
+                    border-radius: 10px;
+                    width: 80%;
+                    position: absolute;
+                    right: 25px;
+                    opacity: 0.5;
+                    color: $text-primary-color;
+                    z-index: 1;
+                    .quantity {
+                        line-height: 16px;
+                    }
+                }
+                .progress {
+                    position: absolute;
+                    background-color: $primary-color;
+                    max-width: 162px;
+                    opacity: 0.9;
+                    height: 16px;
+                    border-radius: 10px;
+                    bottom: -16px;
+                    left: 16px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .prev,
+    .next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 55%;
+        opacity: 0.7;
+        &:hover {
+            border-color: #ccc;
+            opacity: 1;
+        }
+        .icon {
+            color: rgb(163, 163, 163);
+        }
+    }
+    .prev {
+        left: -18px;
+    }
+    .next {
+        right: -18px;
+    }
+}
+
+.banner {
+    margin-top: 20px;
+    .img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,30 @@
+@import "commons/variables.scss";
+.headerCart {
+    .nav {
+        background-color: $primary-color;
+    }
+    .headerBody {
+        height: 100px;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        .headerContainer {
+            height: 50px;
+            .logo:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 10px;
+                height: 20px;
+                border-left: 1px solid $primary-color;
+            }
+            .title {
+                .text {
+                    margin-top: 5px;
+                    color: $primary-color;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

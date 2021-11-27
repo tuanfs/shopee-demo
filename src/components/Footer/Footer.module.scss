@@ -1,0 +1,28 @@
+@import "commons/variables.scss";
+.footer {
+    padding-top: 40px;
+    border-top: 5px solid $primary-color;
+    .title {
+        display: block;
+        font-size: 1.2rem;
+        color: $text-secondary-color;
+        font-weight: 400;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+    .bottom {
+        margin-top: 20px;
+        text-align: center;
+        .text {
+            display: block;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: $text-secondary-color;
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

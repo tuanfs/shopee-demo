@@ -1,0 +1,325 @@
+@import "commons/variables.scss";
+.productItem {
+    background-color: $secondary-color;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    .left {
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        padding: 10px;
+        align-items: center;
+        .mainImg {
+            flex: 1;
+            width: 90%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            margin-bottom: 8px;
+        }
+        .subImg {
+            width: 100%;
+            height: 80px;
+            .itemImg {
+                padding: 0 4px;
+                width: 80px;
+                height: 80px;
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.2s ease;
+                    &:hover {
+                        border: 2px solid $primary-color;
+                    }
+                }
+            }
+        }
+        .leftBottom {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top: 30px;
+            .share {
+                display: flex;
+                align-items: center;
+                .label {
+                    margin-right: 8px;
+                    font-size: 1.6rem;
+                }
+            }
+            .liked {
+                display: flex;
+                align-items: center;
+                .icon {
+                    margin-right: 8px;
+                    color: $primary-color;
+                    font-size: 2rem;
+                }
+                .label {
+                    font-size: 1.6rem;
+                }
+            }
+            .iconList {
+                .icon {
+                    font-size: 2rem;
+                    margin-right: 8px;
+                    cursor: pointer;
+                }
+                .iconFb {
+                    color: #3b5999;
+                }
+                .iconMes {
+                    color: #0384ff;
+                }
+                .iconTw {
+                    color: #10c2ff;
+                }
+            }
+        }
+    }
+    .right {
+        margin-left: 10px;
+        .top {
+            .heading {
+                display: flex;
+                margin-top: 20px;
+                align-items: center;
+                .like {
+                    min-width: 85px;
+                    .label {
+                        background-color: $primary-color;
+                        color: $secondary-color;
+                        font-size: 1.4rem;
+                        line-height: 1.4rem;
+                        display: block;
+                        padding: 2px 4px;
+                        height: 20px;
+                        border-radius: 2px;
+                        margin-right: 8px;
+                    }
+                }
+                .name {
+                    margin-bottom: 0;
+                    font-size: 2rem;
+                    color: rgb(71, 70, 70);
+                }
+            }
+            .rating {
+                margin-top: 10px;
+                .rate {
+                    color: $primary-color;
+                    .link {
+                        color: $primary-color;
+                        font-size: 1.6rem;
+                        margin-right: 4px;
+                        border-bottom: 1px solid $primary-color;
+                    }
+                }
+            }
+            .rate::after,
+            .evaluate::after {
+                border-left: 1px solid #757575;
+                height: 22px;
+                top: 14px;
+                right: 16px;
+            }
+            .evaluate {
+                .link {
+                    font-size: 1.6rem;
+                    color: $text-secondary-color;
+                    .text {
+                        color: #333333;
+                        margin-right: 4px;
+                        border-bottom: 1px solid #000;
+                    }
+                }
+            }
+            .sold {
+                .text {
+                    font-size: 1.6rem;
+                    color: #333333;
+                    .textSub {
+                        color: $text-secondary-color;
+                    }
+                }
+            }
+        }
+        .price {
+            margin-top: 10px;
+            background-color: #fafafa;
+            padding: 10px;
+            .priceTop {
+                display: flex;
+                align-items: center;
+            }
+            .priceOld {
+                margin-right: 8px;
+                .text {
+                    color: $text-secondary-color;
+                    font-size: 1.4rem;
+                    text-decoration: line-through;
+                }
+            }
+            .priceNew {
+                margin-right: 8px;
+                color: $primary-color;
+                display: flex;
+                align-items: center;
+                .label {
+                    font-size: 1.8rem;
+                }
+                .text {
+                    font-size: 3rem;
+                }
+            }
+            .percent {
+                .text {
+                    padding: 0 4px;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border-radius: 2px;
+                }
+            }
+            .priceInfo {
+                .title {
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                    display: block;
+                }
+                .text {
+                    font-size: 1.4rem;
+                    display: block;
+                    color: $text-secondary-color;
+                }
+            }
+        }
+        .itemBody {
+            margin: 30px 0;
+        }
+        .itemBody {
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            .label {
+                display: block;
+                width: 140px;
+                color: $text-secondary-color;
+            }
+        }
+        .codeDiscount {
+            .itemList {
+                .item {
+                    margin-right: 10px;
+                    background-color: #fbebed;
+                    color: $primary-color;
+                    padding: 1px 4px;
+                    border-left: 2px dotted #fff;
+                    border-right: 2px dotted #fff;
+                }
+            }
+        }
+        .deliveryRight {
+            .deliveryFree {
+                display: flex;
+                align-items: center;
+                .info {
+                    margin-left: 10px;
+                    .title {
+                        display: block;
+                        color: #000;
+                    }
+                    .text {
+                        color: $text-secondary-color;
+                    }
+                }
+            }
+            .deliveryTo {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                .deliveryIcon {
+                    width: 60px;
+                    .icon {
+                        font-size: 2.5rem;
+                    }
+                }
+                .to {
+                    .title {
+                        color: $text-secondary-color;
+                        margin-right: 16px;
+                    }
+                    .text:hover {
+                        color: $primary-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .color {
+            .colorList {
+                .item {
+                    color: #333;
+                    border: 1px solid #ccc;
+                    border-radius: 2px;
+                    margin-right: 8px;
+                    padding: 4px 20px;
+                }
+                .item.disabled {
+                    opacity: 0.5;
+                }
+            }
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+            .quantityBtn {
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                padding: 2px 0;
+                margin-right: 16px;
+                text-align: center;
+                cursor: pointer;
+                .minus,
+                .plus {
+                    padding: 0 12px;
+                    font-size: 1.4rem;
+                }
+                .number {
+                    padding: 4px 20px;
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    font-size: 1.6rem;
+                }
+            }
+            .available {
+                color: $text-secondary-color;
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+        }
+        .btn {
+            display: inline-flex;
+            margin-bottom: 30px;
+        }
+        .ensure {
+            padding: 30px 0;
+            border-top: 1px solid #ccc;
+            .title {
+                margin-right: 30px;
+            }
+            .text {
+                color: $text-secondary-color;
+            }
+        }
+    }
+}
+@keyframes OnHide {
+    from {
+        display: block;
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}

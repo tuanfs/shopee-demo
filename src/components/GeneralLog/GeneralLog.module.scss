@@ -1,0 +1,55 @@
+@import "commons/variables.scss";
+.header {
+    background-color: $secondary-color;
+    height: calc($header-height - 20px);
+    .headerContainer {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .logo {
+                fill: $primary-color;
+                width: 150px;
+            }
+            .title {
+                color: #333333;
+                font-size: 2rem;
+                font-weight: 500;
+                margin-left: 20px;
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            .help {
+                color: $primary-color;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.body {
+    background-color: $primary-color;
+    height: 100%;
+    width: 100%;
+    .bodyContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+            width: 50%;
+        }
+        .right {
+            width: 50%;
+            background-color: $secondary-color;
+            height: 500px;
+            width: 400px;
+            border-radius: 4px;
+            padding: 20px;
+        }
+    }
+}

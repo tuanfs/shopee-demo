@@ -1,0 +1,92 @@
+@import "commons/variables.scss";
+
+.noItem {
+    .img {
+        border-radius: 3px;
+    }
+}
+.cartItem {
+    width: 400px;
+    min-height: 180px;
+    position: absolute;
+    top: calc(100% + 3px);
+    right: 40px;
+    background-color: $secondary-color;
+    box-shadow: 0 1px 3px #e6e6e6;
+    border-radius: 3px;
+    &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -24px;
+        cursor: pointer;
+        border-width: 16px 20px;
+        border-style: solid;
+        border-color: transparent transparent $secondary-color transparent;
+    }
+    .imgWrap {
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .heading {
+        text-align: left;
+        padding: 10px;
+    }
+    .itemList {
+        .itemLink {
+            display: block;
+            padding: 4px 0;
+            &:hover {
+                background-color: #f7f7f7;
+            }
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            .imgWrap {
+                width: 40px;
+                height: 50px;
+                .img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .name {
+                .text {
+                    color: #333333;
+                    margin: 0 20px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: block;
+                    max-width: 240px;
+                }
+            }
+            .price {
+                .text {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .itemBottom {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        padding: 10px 10px;
+        .add {
+            display: flex;
+            .text {
+                margin: auto;
+                color: #333333;
+            }
+        }
+        .watchBtn {
+            min-width: 130px;
+            min-height: 35px;
+        }
+    }
+}

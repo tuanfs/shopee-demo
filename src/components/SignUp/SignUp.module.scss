@@ -1,0 +1,126 @@
+@import "commons/variables.scss";
+.signup {
+    .title {
+        font-size: 2rem;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .notify {
+        margin-bottom: 5px;
+        .error,
+        .message {
+            padding: 5px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .error {
+            background-color: #fff9fa;
+            border: 1px solid #ffd4d8;
+        }
+        .message {
+            background-color: #7ef9af;
+            border: 1px solid #08b34c;
+        }
+    }
+    .item {
+        width: 100%;
+        .input {
+            padding: 4px 2px 4px 14px;
+            font-size: 1.5rem;
+        }
+    }
+    .signupBtn {
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: none;
+        width: 100%;
+        &:disabled {
+            opacity: 0.7;
+        }
+        &:disabled:hover {
+            opacity: 0.7;
+            background-color: $primary-color;
+        }
+    }
+    .separate {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        position: relative;
+        &::after {
+            width: 100%;
+            top: 50%;
+            content: "";
+            position: absolute;
+            border: 1px solid $text-third-color;
+        }
+        .text {
+            z-index: 1;
+            color: $text-third-color;
+            font-size: 1.4rem;
+            background-color: $secondary-color;
+            padding: 0 20px;
+        }
+    }
+    .body {
+        .link {
+            background-color: #1877f2;
+            display: block;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 3px;
+            color: $secondary-color;
+            .icon {
+                margin-right: 6px;
+                opacity: 0.9;
+                font-size: 1.6rem;
+            }
+            .text {
+                opacity: 0.9;
+            }
+        }
+        .goolge {
+            background-color: #4285f4;
+        }
+        .facebook {
+        }
+        .apple {
+            background-color: #000;
+        }
+    }
+    .bottom {
+        .policy {
+            text-align: center;
+            margin-top: 20px;
+            padding: 0 40px;
+            line-height: 1.5rem;
+            .policyInto {
+                color: rgb(17, 17, 17);
+                font-size: 1.2rem;
+                display: block;
+                .text {
+                }
+                .link {
+                    line-height: 1.3rem;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .linkLogin {
+        text-align: center;
+        margin-top: 20px;
+        .text {
+            color: $text-third-color;
+            font-size: 1.4rem;
+            .link {
+                color: $primary-color;
+            }
+        }
+    }
+}

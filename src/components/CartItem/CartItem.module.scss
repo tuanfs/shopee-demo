@@ -1,0 +1,97 @@
+@import "commons/variables.scss";
+.item {
+    margin-right: 20px;
+    text-align: center;
+    .itemCheckbox {
+        margin-right: 20px;
+    }
+    .left {
+        width: 80px;
+        height: 80px;
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .itemName {
+        display: flex;
+        .right {
+            .name {
+                color: #333333;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            .bgr {
+                margin-left: 4px;
+                margin-top: 4px;
+                height: 80%;
+                width: 80%;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    .classify {
+        color: $text-secondary-color;
+    }
+    .unitPrice {
+        .price {
+            .priceOld {
+                color: $text-secondary-color;
+                text-decoration: line-through;
+            }
+            .priceNew {
+                margin-left: 4px;
+                color: #333333;
+            }
+        }
+        .discount {
+            font-size: 1.2rem;
+            .percent {
+                color: $primary-color;
+            }
+            .label {
+                margin-left: 4px;
+                padding: 0 2px;
+                background-color: $primary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+    .quantity {
+        text-align: center;
+        .inventory {
+            color: $primary-color;
+        }
+        .quantityBtn {
+            margin: 0 auto;
+            margin-bottom: 4px;
+        }
+    }
+    .total {
+        .price {
+            color: $primary-color;
+        }
+    }
+    .activity {
+        text-align: center;
+        .delete {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        .search {
+            color: $text-secondary-color;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

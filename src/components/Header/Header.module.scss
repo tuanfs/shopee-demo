@@ -1,0 +1,15 @@
+@import "commons/variables.scss";
+.wrapperHeader {
+    padding-bottom: $header-height;
+}
+.header {
+    height: $header-height;
+    width: 100%;
+    background-color: $primary-color;
+}
+.headerHome {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}

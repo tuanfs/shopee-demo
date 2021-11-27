@@ -1,0 +1,20 @@
+@import "commons/variables.scss";
+.productList {
+    .heading {
+        position: relative;
+        background-color: $secondary-color;
+        padding: 10px;
+        // width: 100px;
+        .text {
+            color: $primary-color;
+        }
+        .line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 130px;
+            height: 10px;
+            border-bottom: 4px solid $primary-color;
+        }
+    }
+}

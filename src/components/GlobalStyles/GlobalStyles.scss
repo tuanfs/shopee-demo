@@ -1,0 +1,286 @@
+@import "commons/variables.scss";
+html {
+    font-size: 62.5%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f5f5f5 !important;
+}
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-width: 1140px;
+}
+@media (min-width: 476px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+// @media (min-width: 476px) {
+//     .container {
+//         width: 100%;
+//     }
+// }
+// @media (min-width: 768px) {
+//     .container {
+//         width: 720px;
+//         max-width: 100%;
+//     }
+// }
+// @media (min-width: 992px) {
+//     .container {
+//         width: 960px;
+//         max-width: 100%;
+//     }
+// }
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+        max-width: 100%;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+        max-width: 100%;
+    }
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+.mr-8 {
+    margin-right: 8px;
+}
+.mr-4 {
+    margin-right: 4px;
+}
+.ml-4 {
+    margin-left: 4px;
+}
+.separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 2px solid #fb9086;
+    height: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+}
+.separate-footer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.5;
+    border-left: 2px solid $text-secondary-color;
+    height: 14px;
+    top: 21%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.show {
+    display: block !important;
+}
+.discount {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    opacity: 0.9;
+    background-color: #ffd839;
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    .discount-percent {
+        color: $primary-color;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin: 2px 0;
+    }
+    .discount-lable {
+        margin: 0;
+        display: block;
+        color: $secondary-color;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        border-width: 0 25px 4px;
+        border-color: transparent rgba(255, 216, 64, 0.94) transparent rgba(255, 216, 64, 0.94);
+        border-style: solid;
+    }
+}
+.pagination-list li {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.header-logo-primary {
+    fill: $primary-color;
+}
+.header-logo-secondary {
+    fill: $secondary-color;
+}
+.btn {
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid $primary-color;
+    background-color: #ffeee8;
+    color: $primary-color;
+    display: flex;
+    margin: auto;
+    min-width: 180px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    min-height: 44px;
+}
+.btn.primary {
+    background-color: $primary-color;
+    color: $secondary-color !important;
+}
+.btn + .btn {
+    margin-left: 20px;
+}
+.container .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+.container .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.container .ant-checkbox:hover .ant-checkbox-inner,
+.container .ant-checkbox-input:focus + .ant-checkbox-inner,
+.container .ant-checkbox-checked::after {
+    border-color: $primary-color;
+}
+.container .ant-checkbox + span {
+    padding: 0 20px;
+}
+.quantityBtn {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-right: 16px;
+    display: flex;
+    cursor: pointer;
+    max-width: 115px;
+    .minus,
+    .plus {
+        margin: auto;
+        font-size: 1.4rem;
+        width: 25%;
+        border: none;
+        background-color: $secondary-color;
+    }
+    .number {
+        text-align: center;
+        border: none;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        font-size: 1.6rem;
+        width: 50%;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.container .ant-btn-primary {
+    background-color: $primary-color;
+    border: none;
+    border-right: 2px solid $primary-color;
+    width: 80px;
+    margin-right: -2px;
+}
+.container .ant-btn-primary:hover,
+.ant-btn-primary:focus {
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+.container .ant-input-search .ant-input:hover,
+.container .ant-input-search .ant-input:focus {
+    border: none;
+}
+.container .ant-input-affix-wrapper:focus,
+.container .ant-input-affix-wrapper-focused {
+    border: none;
+    box-shadow: none;
+}
+.container .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border: none;
+}
+.container .ant-input-affix-wrapper {
+    border: none;
+}
+.container .ant-input-wrapper {
+    border: 2px solid $primary-color;
+}
+.container .ant-input:focus,
+.container .ant-input-focused {
+    z-index: 0;
+    border: none;
+    box-shadow: none;
+}
+.container .ant-input-group .ant-input:focus {
+    z-index: 0;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+button {
+    cursor: pointer;
+}
+.item-cart:last-child .ant-divider {
+    display: none;
+}
+.container .ant-divider-horizontal {
+    margin: 12px 0;
+}
+.primary-color {
+    color: $primary-color !important;
+}
+
+body .ant-notification-notice-message {
+    color: #46d31b;
+}
+body .ant-result-extra {
+    display: flex;
+    justify-content: center;
+}
+body .ant-result-extra > *:last-child {
+    margin-right: auto;
+}

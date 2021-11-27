@@ -1,0 +1,30 @@
+@import "commons/variables.scss";
+.shop {
+    background-color: $secondary-color;
+    padding: 16px 0;
+    margin-bottom: 20px;
+    .shopName {
+        margin-left: 40px;
+        .text {
+            margin-left: 4px;
+            font-size: 1.5rem;
+        }
+    }
+    .itemList {
+        margin-left: 40px;
+    }
+    .bottomShop {
+        margin-left: 20px;
+        .icon {
+            color: #16c5ad;
+            font-size: 1.6rem;
+            margin-right: 10px;
+        }
+        .text {
+            color: $text-secondary-color;
+        }
+        .link {
+            color: #0055aa;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "commons/variables.scss";
+
+.category {
+    background-color: $secondary-color;
+}
+
+.item {
+    text-align: center;
+    box-shadow: 0px 1px 2px #dddddd;
+    height: 180px;
+    overflow: hidden;
+    &:hover {
+        box-shadow: 0px 1px 2px #aca9a9;
+        transition: all 0.2s ease;
+    }
+    .img {
+        width: 80%;
+    }
+    .label {
+        color: #333;
+    }
+}

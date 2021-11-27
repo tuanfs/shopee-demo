@@ -1,0 +1,29 @@
+@import "commons/variables.scss";
+.payment {
+    margin-top: 16px;
+    background-color: $secondary-color;
+    border-radius: 2px;
+}
+.link {
+    color: $text-secondary-color;
+    text-align: center;
+    display: block;
+    transition: all 0.2s ease;
+    padding: 10px 0;
+    &:hover {
+        transform: translateY(-4px);
+        color: $text-secondary-color;
+    }
+    .img {
+        width: 30%;
+    }
+    .lable {
+        display: block;
+    }
+}
+.banner {
+    margin: 20px 0;
+    .img {
+        width: 100%;
+    }
+}
