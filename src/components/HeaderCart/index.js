@@ -3,7 +3,7 @@ import styles from "./HeaderCart.module.scss";
 import clsx from "clsx";
 import MenuNav from "components/MenuNav";
 import { Link } from "react-router-dom";
-import { Row, Col, Space, Input } from "antd";
+import { Row, Col, Input } from "antd";
 
 const { Search } = Input;
 

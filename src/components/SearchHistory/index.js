@@ -36,7 +36,7 @@ function SeachHistory(props) {
   const renderHistoryList = () => {
     return historyList.map((item, index) => (
       <li key={index} className={styles.item}>
-        <a className={styles.link}>{item.title}</a>
+        <span className={styles.link}>{item.title}</span>
       </li>
     ));
   };
@@ -50,7 +50,7 @@ function SeachHistory(props) {
         {value === "" ? (
           <div className={styles.headingItem}>
             <span>Chính hãng giảm sâu</span>
-            <img className={styles.img} src={historyImage} />
+            <img className={styles.img} src={historyImage} alt="Ảnh giảm giá" />
           </div>
         ) : (
           <div className={styles.headingItem}>

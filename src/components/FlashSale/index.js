@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
 import styles from "./FlashSale.module.scss";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Row, Col, Button, Tooltip } from "antd";
@@ -42,7 +41,7 @@ function FlashSale(props) {
   };
   const renderListSale = () => {
     return data.map((item, index) => (
-      <a key={index}>
+      <div key={index}>
         <div className={styles.item}>
           <div className={styles.top}>
             <div
@@ -71,7 +70,7 @@ function FlashSale(props) {
             <span className="discount-lable">Giảm</span>
           </div>
         </div>
-      </a>
+      </div>
     ));
   };
   return (
@@ -82,9 +81,9 @@ function FlashSale(props) {
             <h3 className={styles.title}>Flash Sale</h3>
           </div>
           <div className={styles.right}>
-            <a className={styles.link}>
+            <span className={styles.link}>
               Xem tất cả <RightOutlined />
-            </a>
+            </span>
           </div>
         </div>
         <div className={styles.body}>

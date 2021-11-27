@@ -17,7 +17,7 @@ function PrivateRoute() {
       setLoading(true);
       setRender(1);
     };
-  }, [loading, render]);
+  }, [loading, render, currentUser]);
   return (
     <>{!loading && (currentUser ? <Outlet /> : <Navigate to="/login" />)}</>
   );

@@ -1,7 +1,6 @@
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 import React, { useState } from "react";
 import styles from "./ModalImg.module.scss";
-import Slider from "react-slick";
 function ModalImg(props) {
   const { showModal, imgList, img, name, onCancel } = props;
   const [imgMain, setImgMain] = useState(img);
@@ -17,7 +16,11 @@ function ModalImg(props) {
       >
         <div className={styles.modalContent}>
           <div className={styles.left}>
-            <img src={imgMain || img} className={styles.imgMain} />
+            <img
+              src={imgMain || img}
+              className={styles.imgMain}
+              alt="Ảnh sản phẩm"
+            />
           </div>
           <div className={styles.right}>
             <h3 className={styles.title}>{name}</h3>
@@ -29,7 +32,11 @@ function ModalImg(props) {
                       key={index}
                       className={styles.itemImg}
                     >
-                      <img className={styles.img} src={item} />
+                      <img
+                        className={styles.img}
+                        src={item}
+                        alt="Ảnh sản phẩm"
+                      />
                     </div>
                   ))
                 : ""}
@@ -40,7 +47,11 @@ function ModalImg(props) {
                       key={index}
                       className={styles.itemImg}
                     >
-                      <img className={styles.img} src={item} />
+                      <img
+                        className={styles.img}
+                        src={item}
+                        alt="Ảnh sản phẩm"
+                      />
                     </div>
                   ))
                 : ""}
@@ -51,7 +62,11 @@ function ModalImg(props) {
                       key={index}
                       className={styles.itemImg}
                     >
-                      <img className={styles.img} src={item} />
+                      <img
+                        className={styles.img}
+                        src={item}
+                        alt="Ảnh sản phẩm"
+                      />
                     </div>
                   ))
                 : ""}

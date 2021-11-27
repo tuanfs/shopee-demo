@@ -27,12 +27,12 @@ function Category(props) {
     return data.map((data, index) => (
       <Col key={index} span={3}>
         <div className={styles.item}>
-          <a href="#" className={styles.link}>
+          <span className={styles.link}>
             <div>
               <img className={styles.img} src={data.img} alt="category" />
             </div>
             <span className={styles.label}>{data.title}</span>
-          </a>
+          </span>
         </div>
       </Col>
     ));

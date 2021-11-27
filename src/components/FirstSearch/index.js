@@ -1,7 +1,6 @@
 import Slider from "react-slick";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./FirstSearch.module.scss";
-import axios from "axios";
 const settings = {
   dots: false,
   infinite: true,
@@ -68,7 +67,7 @@ const firstSearchList = [
 function FirstSearch(props) {
   const renderList = () => {
     return firstSearchList.map((item, index) => (
-      <a key={index} href="">
+      <div key={index}>
         <div className={styles.item}>
           <div className={styles.top}>
             <img src={item.img} className={styles.img} alt="first-search" />
@@ -83,7 +82,7 @@ function FirstSearch(props) {
             <p className={styles.text}>TOP</p>
           </div>
         </div>
-      </a>
+      </div>
     ));
   };
   return (

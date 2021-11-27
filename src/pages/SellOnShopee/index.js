@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import BannerVendor from "components/BannerVendor";
 import Header from "components/Header";
 

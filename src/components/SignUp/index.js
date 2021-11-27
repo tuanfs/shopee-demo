@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./SignUp.module.scss";
 import clsx from "clsx";
 import { Button, Col, Form, Input, Row } from "antd";
@@ -11,7 +11,6 @@ function SignUp(props) {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [disabledBtn, setDisabledBtn] = useState(false);
-  const [loading, setLoading] = useState(false);
   useEffect(() => {
     if (email === "" || password === "") {
       setDisabledBtn(true);
@@ -98,22 +97,22 @@ function SignUp(props) {
       <div className={styles.body}>
         <Row gutter={[8]}>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.facebook)}>
+            <span className={clsx(styles.link, styles.facebook)}>
               <i className={clsx(styles.icon, "fab fa-facebook")}></i>
               <span className={styles.text}>Facebook</span>
-            </a>
+            </span>
           </Col>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.goolge)}>
+            <span className={clsx(styles.link, styles.goolge)}>
               <i className={clsx(styles.icon, "fab fa-google")}></i>
               <span className={styles.text}>Google</span>
-            </a>
+            </span>
           </Col>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.apple)}>
+            <span className={clsx(styles.link, styles.apple)}>
               <i className={clsx(styles.icon, "fab fa-apple")}></i>
               <span className={styles.text}>Apple</span>
-            </a>
+            </span>
           </Col>
         </Row>
       </div>
@@ -124,8 +123,8 @@ function SignUp(props) {
               {" "}
               Bằng việc đăng ký, bạn đã đồng ý với Shoppe về
             </span>
-            <a className={styles.link}> Điều khoản dịch vụ</a> {"&"}
-            <a className={styles.link}> Chính sách bảo mật</a>
+            <span className={styles.link}> Điều khoản dịch vụ</span> {"&"}
+            <span className={styles.link}> Chính sách bảo mật</span>
           </div>
         </div>
         <div className={styles.linkLogin}>

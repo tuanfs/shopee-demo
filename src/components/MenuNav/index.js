@@ -38,48 +38,48 @@ function MenuNav(props) {
             </Link>
           </li>
           <li className={styles.item}>
-            <a className={`${styles.link} separate qr-link`} href="">
+            <span className={`${styles.link} separate qr-link`}>
               Tải ứng dụng
-            </a>
+            </span>
             <div className={clsx(styles.qrCode, styles.dropdown)}>
               <div className={styles.image}>
-                <a>
-                  <img src={qrCode} />
-                </a>
+                <span>
+                  <img src={qrCode} alt="Qr code" />
+                </span>
               </div>
               <div className={styles.appList}>
-                <a className={styles.app} href="">
-                  <img src={googleApp} />
-                </a>
-                <a className={styles.app} href="">
-                  <img src={appstoreApp} />
-                </a>
-                <a className={styles.app} href=""></a>
+                <span className={styles.app}>
+                  <img src={googleApp} alt="Google App" />
+                </span>
+                <span className={styles.app}>
+                  <img src={appstoreApp} alt="App Store" />
+                </span>
+                <span className={styles.app}></span>
               </div>
             </div>
           </li>
           <li className={styles.item}>
-            <a className={`${styles.link} ${styles.linkText}`} href="">
+            <span className={`${styles.link} ${styles.linkText}`} href="">
               <span className={`${styles.label}`}> Kết nối</span>
               <i className={`fab fa-facebook-f mr-8 ${styles.icon}`}></i>
               <i className={`fab fa-instagram ${styles.icon}`}></i>
-            </a>
+            </span>
           </li>
         </ul>
       </div>
       <div className={styles.right}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <a className={styles.link} href="">
+            <span className={styles.link} href="">
               <BellOutlined className={styles.icon} />
               <span className={styles.label}>Thông báo</span>
-            </a>
+            </span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link} href="">
+            <span className={styles.link} href="">
               <QuestionCircleOutlined className={styles.icon} />
               <span className={styles.label}>Hỗ trợ</span>
-            </a>
+            </span>
           </li>
           {currentUser ? (
             <>

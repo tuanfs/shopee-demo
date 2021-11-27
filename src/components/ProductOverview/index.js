@@ -5,8 +5,8 @@ import ModalImg from "components/ModalImg";
 import { Col, Row } from "antd";
 import Slider from "@ant-design/react-slick";
 import PropTypes from "prop-types";
-import { useDispatch, useSelector } from "react-redux";
-import { addAsyncCart, getStatusAdd } from "features/cartSlice";
+import { useDispatch } from "react-redux";
+import { addAsyncCart } from "features/cartSlice";
 import { useAuth } from "context/auth/AuthContext";
 import { notification } from "antd";
 
@@ -16,18 +16,8 @@ ProductOverview.propTypes = {
 
 function ProductOverview(props) {
   const { productItem } = props;
-  const {
-    name,
-    id,
-    img,
-    imglist,
-    price,
-    like,
-    sold,
-    discount,
-    warehouse,
-    supplier,
-  } = productItem;
+  const { name, id, img, imglist, price, like, discount, warehouse, supplier } =
+    productItem;
   const [showModal, setShowModal] = useState(false);
   const [imgMain, setImgMain] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -91,7 +81,11 @@ function ProductOverview(props) {
                         key={index}
                         className={styles.itemImg}
                       >
-                        <img className={styles.img} src={item} />
+                        <img
+                          className={styles.img}
+                          src={item}
+                          alt="Ảnh sản phẩm"
+                        />
                       </div>
                     ))
                   : ""}
@@ -101,9 +95,7 @@ function ProductOverview(props) {
                         onMouseOver={() => setImgMain(item)}
                         key={index}
                         className={styles.itemImg}
-                      >
-                        <img className={styles.img} src={item} />
-                      </div>
+                      ></div>
                     ))
                   : ""}
                 {imglist
@@ -113,7 +105,11 @@ function ProductOverview(props) {
                         key={index}
                         className={styles.itemImg}
                       >
-                        <img className={styles.img} src={item} />
+                        <img
+                          className={styles.img}
+                          src={item}
+                          alt="Ảnh sản phẩm"
+                        />
                       </div>
                     ))
                   : ""}
@@ -172,7 +168,7 @@ function ProductOverview(props) {
                 <Row>
                   <Col span="6">
                     <div className={clsx(styles.rate, "separate-footer")}>
-                      <a className={styles.link}>4.9</a>
+                      <span className={styles.link}>4.9</span>
                       <i className={clsx("fas fa-star", styles.icon)}></i>
                       <i className={clsx("fas fa-star", styles.icon)}></i>
                       <i className={clsx("fas fa-star", styles.icon)}></i>
@@ -183,10 +179,10 @@ function ProductOverview(props) {
                   <Col span="6">
                     {" "}
                     <div className={clsx(styles.evaluate, "separate-footer")}>
-                      <a className={styles.link}>
+                      <span className={styles.link}>
                         <span className={styles.text}>3,3k</span>
                         Đánh giá
-                      </a>
+                      </span>
                     </div>
                   </Col>
                   <Col span="6">

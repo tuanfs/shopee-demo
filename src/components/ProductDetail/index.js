@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styles from "./ProductDetail.module.scss";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import {

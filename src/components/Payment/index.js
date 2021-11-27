@@ -57,10 +57,10 @@ function Payment(props) {
   const renderPayList = () => {
     return paymentList.map((item, index) => (
       <Col key={index} span={3}>
-        <a className={styles.link}>
-          <img className={styles.img} src={item.img} />
+        <span className={styles.link}>
+          <img className={styles.img} src={item.img} alt="Banner" />
           <span className={styles.lable}>{item.lable}</span>
-        </a>
+        </span>
       </Col>
     ));
   };
@@ -68,7 +68,7 @@ function Payment(props) {
     <div>
       <Row className={styles.payment}>{renderPayList()}</Row>
       <div className={styles.banner}>
-        <img className={styles.img} src={banner} />
+        <img className={styles.img} src={banner} alt="Banner" />
       </div>
     </div>
   );

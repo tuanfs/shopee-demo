@@ -74,6 +74,7 @@ function Cart(props) {
     <div className={clsx(styles.cart, "container")}>
       <div className={styles.title}>
         <img
+          alt="Ảnh cart"
           className={styles.img}
           src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/1cdd37339544d858f4d0ade5723cd477.png"
         />
@@ -123,7 +124,7 @@ function Cart(props) {
             </div>
           </Col>
           <Col span={5}>
-            <a className={styles.link}>Chọn Hoặc Nhập mã</a>
+            <span className={styles.link}>Chọn Hoặc Nhập mã</span>
           </Col>
         </Row>
         <Divider dashed />
@@ -133,24 +134,26 @@ function Cart(props) {
               <Checkbox />
             </Col>
             <Col span={3}>
-              <a className={styles.link}>Chọn Tất Cả </a>
+              <span className={styles.link}>Chọn Tất Cả </span>
             </Col>
             <Col span={1}>
-              <a className={styles.link}>Xóa</a>
+              <span className={styles.link}>Xóa</span>
             </Col>
             <Col span={6}>
-              <a className={styles.link}>Bỏ sản phẩm không hoạt động</a>
+              <span className={styles.link}>Bỏ sản phẩm không hoạt động</span>
             </Col>
             <Col span={4}>
-              <a className={clsx(styles.link, "primary-color", styles.payment)}>
+              <span
+                className={clsx(styles.link, "primary-color", styles.payment)}
+              >
                 Lưu vào mục đã thanh toán
-              </a>
+              </span>
             </Col>
             <Col span={5}>
-              <a className={styles.link}>Lưu vào mục đã thanh toán</a>
+              <span className={styles.link}>Lưu vào mục đã thanh toán</span>
             </Col>
             <Col span={4}>
-              <a className={clsx(styles.link, "btn primary")}>Mua Hàng</a>
+              <span className={clsx(styles.link, "btn primary")}>Mua Hàng</span>
             </Col>
           </Row>
         </div>

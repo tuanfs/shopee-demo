@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./CartDropdown.module.scss";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
@@ -9,7 +9,6 @@ function CartDropdown(props) {
     const result = cartByUser.filter(
       (cart, index) => index > cartByUser.length - 6
     );
-    console.log(result);
     return result.map((cart, index) => (
       <Link
         key={index}
@@ -18,7 +17,7 @@ function CartDropdown(props) {
       >
         <div className={styles.item}>
           <div className={styles.imgWrap}>
-            <img className={styles.img} src={cart.img} />
+            <img className={styles.img} src={cart.img} alt="Ảnh sản phẩm" />
           </div>
           <div className={styles.name}>
             <span className={styles.text}>{cart.name}</span>
@@ -38,6 +37,7 @@ function CartDropdown(props) {
             <img
               className={styles.img}
               src="https://shoptito.com/public/images/empty-cart.png"
+              alt="Chưa có sản phẩm"
             />
           </div>
         ) : (

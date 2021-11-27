@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ShopOutlined } from "@ant-design/icons";
 import styles from "./CartShop.module.scss";
@@ -77,7 +77,7 @@ function CartShop(props) {
         <span className={styles.text}>
           Giảm ₫70.000 phí vận chuyển đơn tối thiểu ₫300.000;{" "}
         </span>
-        <a className={styles.link}>Tìm hiểu thêm</a>
+        <span className={styles.link}>Tìm hiểu thêm</span>
       </div>
     </div>
   );

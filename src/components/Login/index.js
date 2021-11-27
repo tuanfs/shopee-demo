@@ -8,7 +8,6 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
   const [disableBtn, setDisabledBtn] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -22,7 +21,6 @@ function Login(props) {
   async function handleSubmit() {
     try {
       setError("");
-      setLoading(true);
       await login(email, password);
       navigate("/");
     } catch {
@@ -103,8 +101,8 @@ function Login(props) {
         </Form.Item>
       </Form>
       <div className={styles.reset}>
-        <a className={styles.link}>Quên mật khẩu</a>
-        <a className={styles.link}>Đăng nhập với SMS</a>
+        <span className={styles.link}>Quên mật khẩu</span>
+        <span className={styles.link}>Đăng nhập với SMS</span>
       </div>
       <div className={styles.separate}>
         <span className={styles.text}>Hoặc</span>
@@ -112,22 +110,22 @@ function Login(props) {
       <div className={styles.body}>
         <Row gutter={[8]}>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.facebook)}>
+            <span className={clsx(styles.link, styles.facebook)}>
               <i className={clsx(styles.icon, "fab fa-facebook")}></i>
               <span className={styles.text}>Facebook</span>
-            </a>
+            </span>
           </Col>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.goolge)}>
+            <span className={clsx(styles.link, styles.goolge)}>
               <i className={clsx(styles.icon, "fab fa-google")}></i>
               <span className={styles.text}>Google</span>
-            </a>
+            </span>
           </Col>
           <Col span={8}>
-            <a className={clsx(styles.link, styles.apple)}>
+            <span className={clsx(styles.link, styles.apple)}>
               <i className={clsx(styles.icon, "fab fa-apple")}></i>
               <span className={styles.text}>Apple</span>
-            </a>
+            </span>
           </Col>
         </Row>
       </div>

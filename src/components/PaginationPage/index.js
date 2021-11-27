@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./PaginationPage.module.scss";
 import { Pagination } from "antd";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";

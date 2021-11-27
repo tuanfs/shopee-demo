@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Col, Row, Checkbox, Divider } from "antd";
 import styles from "./CartItem.module.scss";
 import clsx from "clsx";
@@ -35,9 +35,9 @@ function CartItem(props) {
           </div>
         </Col>
         <Col span={2}>
-          <a className={styles.left}>
-            <img src={img} className={styles.img} />
-          </a>
+          <span className={styles.left}>
+            <img src={img} className={styles.img} alt="Ảnh sản phẩm" />
+          </span>
         </Col>
         <Col span={6}>
           <div className={styles.itemName}>
@@ -111,7 +111,7 @@ function CartItem(props) {
             <button onClick={() => handleOnClick(id)} className={styles.delete}>
               Xóa
             </button>
-            <a className={styles.search}>Tìm sản phẩm tương tự</a>
+            <span className={styles.search}>Tìm sản phẩm tương tự</span>
           </div>
         </Col>
       </Row>

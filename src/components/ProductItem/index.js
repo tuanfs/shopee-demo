@@ -41,7 +41,7 @@ function ProductItem(props) {
               </div>
             </Link>
             <div className={styles.semilar}>
-              <a className={styles.link}>Tìm sản phẩm tương tự</a>
+              <span className={styles.link}>Tìm sản phẩm tương tự</span>
             </div>
           </div>
         </Col>

@@ -28,7 +28,7 @@ function index(props) {
             <span className={styles.title}>{title}</span>
           </div>
           <div className={styles.right}>
-            <a className={styles.help}>Cần trợ giúp ?</a>
+            <span className={styles.help}>Cần trợ giúp ?</span>
           </div>
         </div>
       </div>

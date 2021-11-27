@@ -28,9 +28,9 @@ function HeaderBody(props) {
     async function fetch() {
       setLoading(true);
       await dispatch(fetchAsyncCart());
-      getCart();
+      getCart(cart);
     }
-    function getCart() {
+    function getCart(cart) {
       if (cart && currentUser) {
         if (cart.length > 0) {
           dispatch(
@@ -104,22 +104,22 @@ function HeaderBody(props) {
         {show && <SearchHistory value={valueInput} />}
         <div className={styles.lable}>
           <li className={styles.item}>
-            <a className={styles.link}>Áo khoác</a>
+            <span className={styles.link}>Áo khoác</span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link}>Váy</a>
+            <span className={styles.link}>Váy</span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link}>Quần</a>
+            <span className={styles.link}>Quần</span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link}>Túi xách nữ</a>
+            <span className={styles.link}>Túi xách nữ</span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link}>Dép</a>
+            <span className={styles.link}>Dép</span>
           </li>
           <li className={styles.item}>
-            <a className={styles.link}>Dép nữ</a>
+            <span className={styles.link}>Dép nữ</span>
           </li>
         </div>
       </div>

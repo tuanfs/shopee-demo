@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ProductListing.module.scss";
 import ProductItem from "../ProductItem";
 import { fetchAsyncProduct, getAllProducts } from "features/productSlice";
@@ -13,7 +13,7 @@ function ProductListting(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAsyncProduct());
-  }, []);
+  }, [dispatch]);
   const handleOnchange = (page, pageSize) => {
     setPage(page);
     setPageSize(pageSize);
